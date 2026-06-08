@@ -1,17 +1,82 @@
 [
   {
-    "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
-    "expected_answer": "Phạt tù từ 1 đến 5 năm đối với trường hợp tàng trữ từ 1g đến dưới 5g heroin hoặc cocaine, hoặc chất ma tuý khác với khối lượng tương đương.",
-    "expected_context": "Bộ luật Hình sự 2015, Điều 249"
+    "question": "Điều 249 Bộ luật Hình sự quy định mức phạt cơ bản nào cho tội tàng trữ trái phép chất ma túy?",
+    "expected_answer": "Khoản 1 Điều 249 quy định người tàng trữ trái phép chất ma túy thuộc các trường hợp luật định bị phạt tù từ 03 năm đến 05 năm.",
+    "expected_context": "Bộ luật Hình sự 2015 sửa đổi 2017, Điều 249 khoản 1"
   },
   {
-    "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
-    "expected_answer": "Cai nghiện tự nguyện tại gia đình, cai nghiện tự nguyện tại cộng đồng, cai nghiện tự nguyện tại cơ sở cai nghiện, và cai nghiện bắt buộc tại cơ sở cai nghiện.",
-    "expected_context": "Luật Phòng chống ma tuý 2021, Chương V"
+    "question": "Khoản 1 Điều 249 nêu ngưỡng heroin, cocaine, methamphetamine, amphetamine, ketamine, fentanyl, MDMA hoặc XLR-11 là bao nhiêu?",
+    "expected_answer": "Ngưỡng định lượng là từ 0,1 gam đến dưới 05 gam.",
+    "expected_context": "Bộ luật Hình sự 2015 sửa đổi 2017, Điều 249 điểm c khoản 1"
   },
   {
-    "question": "Danh mục các chất ma tuý thuộc nhóm I theo quy định pháp luật Việt Nam gồm những chất nào?",
-    "expected_answer": "Nhóm I gồm các chất ma tuý tuyệt đối cấm sử dụng trong y học và đời sống, bao gồm heroin, cocaine, methamphetamine, MDMA (ecstasy), cannabis (cần sa), và các chất tương tự.",
-    "expected_context": "Nghị định 57/2022/NĐ-CP, Phụ lục I"
+    "question": "Điều 255 Bộ luật Hình sự quy định mức phạt cơ bản nào cho tội tổ chức sử dụng trái phép chất ma túy?",
+    "expected_answer": "Khoản 1 Điều 255 quy định người tổ chức sử dụng trái phép chất ma túy bị phạt tù từ 03 năm đến 07 năm.",
+    "expected_context": "Bộ luật Hình sự 2015 sửa đổi 2017, Điều 255 khoản 1"
+  },
+  {
+    "question": "Luật Phòng, chống ma túy 2021 điều chỉnh những nhóm nội dung nào?",
+    "expected_answer": "Luật quy định về phòng, chống ma túy; quản lý người sử dụng trái phép chất ma túy; cai nghiện ma túy; trách nhiệm của cá nhân, gia đình, cơ quan, tổ chức; quản lý nhà nước và hợp tác quốc tế về phòng, chống ma túy.",
+    "expected_context": "Luật Phòng, chống ma túy 2021, Điều 1"
+  },
+  {
+    "question": "Theo Luật Phòng, chống ma túy 2021, chất ma túy được hiểu là gì?",
+    "expected_answer": "Chất ma túy là chất gây nghiện, chất hướng thần được quy định trong danh mục chất ma túy do Chính phủ ban hành.",
+    "expected_context": "Luật Phòng, chống ma túy 2021, Điều 2 khoản 1"
+  },
+  {
+    "question": "Thời hạn quản lý người sử dụng trái phép chất ma túy theo Điều 23 là bao lâu?",
+    "expected_answer": "Thời hạn quản lý là 01 năm kể từ ngày Chủ tịch Ủy ban nhân dân cấp xã ra quyết định quản lý.",
+    "expected_context": "Luật Phòng, chống ma túy 2021, Điều 23 khoản 2"
+  },
+  {
+    "question": "Điều 23 quy định những nội dung quản lý nào đối với người sử dụng trái phép chất ma túy?",
+    "expected_answer": "Nội dung quản lý gồm tư vấn, động viên, giáo dục, giúp đỡ; xét nghiệm chất ma túy trong cơ thể; và ngăn chặn hành vi gây mất trật tự, an toàn xã hội.",
+    "expected_context": "Luật Phòng, chống ma túy 2021, Điều 23 khoản 3"
+  },
+  {
+    "question": "Theo Nghị định 105/2021/NĐ-CP, cơ quan nào là nòng cốt trong hoạt động phối hợp phòng, chống tội phạm về ma túy trên phạm vi toàn quốc?",
+    "expected_answer": "Cơ quan chuyên trách phòng, chống tội phạm về ma túy thuộc Công an nhân dân là lực lượng nòng cốt.",
+    "expected_context": "Nghị định 105/2021/NĐ-CP, Điều 3 khoản 2 điểm d"
+  },
+  {
+    "question": "Nghị định 105/2021/NĐ-CP yêu cầu việc quản lý người sử dụng trái phép chất ma túy phải bảo đảm nguyên tắc gì?",
+    "expected_answer": "Việc quản lý phải công khai, khách quan, đúng quy định pháp luật; tôn trọng quyền lợi hợp pháp; cập nhật thông tin chính xác; và phối hợp chặt chẽ giữa các cơ quan chức năng.",
+    "expected_context": "Nghị định 105/2021/NĐ-CP, Điều 3 khoản 4"
+  },
+  {
+    "question": "Trong bài Tuổi Trẻ, ca sĩ Chi Dân bị truy tố về tội gì?",
+    "expected_answer": "Nguyễn Trung Hiếu (ca sĩ Chi Dân) bị truy tố về tội tổ chức sử dụng trái phép chất ma túy.",
+    "expected_context": "Bài báo Tuổi Trẻ về Chi Dân, An Tây, Trúc Phương"
+  },
+  {
+    "question": "Theo bài Tuổi Trẻ, Andrea Aybar Carmona (An Tây) bị truy tố về những tội gì?",
+    "expected_answer": "An Tây bị truy tố về tội tổ chức sử dụng trái phép chất ma túy và tàng trữ trái phép chất ma túy.",
+    "expected_context": "Bài báo Tuổi Trẻ về Chi Dân, An Tây, Trúc Phương"
+  },
+  {
+    "question": "Bài Tuổi Trẻ nêu cả nhóm của Chi Dân đã hùn tiền mua những gì để sử dụng ngày 4-11-2024?",
+    "expected_answer": "Cả nhóm hùn tiền mua 5g ketamine và 3 viên MDMA giá 3 triệu đồng để sử dụng.",
+    "expected_context": "Bài báo Tuổi Trẻ về Chi Dân, An Tây, Trúc Phương"
+  },
+  {
+    "question": "Theo bài Công Lý, Bùi Thị Lệ Hằng bị khởi tố về tội gì và tang vật là gì?",
+    "expected_answer": "Bùi Thị Lệ Hằng bị khởi tố về tội mua bán trái phép chất ma túy; tang vật là 0,7 gram ma túy tổng hợp mà bà khai mua với giá 500.000 đồng để bán kiếm lời.",
+    "expected_context": "Bài báo Công Lý về Lệ Hằng"
+  },
+  {
+    "question": "Theo bài VTC News, ngày nào Chi Dân bị khởi tố, bắt khẩn cấp và về những hành vi nào?",
+    "expected_answer": "Ngày 14/11/2024, Chi Dân bị khởi tố, bắt khẩn cấp để điều tra các hành vi tàng trữ và tổ chức sử dụng ma túy.",
+    "expected_context": "Bài báo VTC News về sao Việt liên quan ma túy"
+  },
+  {
+    "question": "Theo bài VTC News, An Tây bị phát hiện trong hoàn cảnh nào và bị truy tố về mấy tội?",
+    "expected_answer": "Ngày 9/11/2024, công an kiểm tra căn hộ ở TP. Thủ Đức và phát hiện An Tây cùng nhóm bạn đang sử dụng ma túy; cô bị truy tố về hai tội.",
+    "expected_context": "Bài báo VTC News về sao Việt liên quan ma túy"
+  },
+  {
+    "question": "Theo bài Báo Quảng Ninh, nhà thiết kế Công Trí bị bắt vì liên quan đến đường dây nào?",
+    "expected_answer": "Công Trí bị bắt vì liên quan đến đường dây tổ chức, mua bán và sử dụng trái phép chất ma túy.",
+    "expected_context": "Bài báo Quảng Ninh về bê bối ma túy showbiz"
   }
 ]

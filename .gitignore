@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+.omx/
+.venv/
+.venv copy/
+src_w_solution/

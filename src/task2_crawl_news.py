@@ -24,13 +24,37 @@ def setup_directory():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
-# TODO: Điền danh sách URL bài báo cần crawl
 ARTICLE_URLS = [
-    # Ví dụ:
-    # "https://vnexpress.net/...",
-    # "https://tuoitre.vn/...",
-    # "https://thanhnien.vn/...",
+    "https://tuoitre.vn/ca-si-chi-dan-nguoi-mau-an-tay-co-tien-truc-phuong-to-chuc-su-dung-ma-tuy-ra-sao-2026040214370414.htm",
+    "https://vtcnews.vn/sao-viet-tieu-tan-su-nghiep-vi-lien-quan-den-ma-tuy-ar1014013.html",
+    "https://congly.vn/nu-dien-vien-le-hang-bi-bat-vi-mua-ban-ma-tuy-376145.html",
+    "https://vov.vn/giai-tri/chua-day-1-thang-3-nghe-si-viet-bi-khoi-to-vi-lien-quan-ma-tuy-gay-chan-dong-post1293496.vov",
+    "https://baoquangninh.vn/showbiz-viet-nhung-nghe-si-gay-soc-vi-be-boi-ma-tuy-3368448.html",
 ]
+
+def extract_title(markdown_text: str) -> str:
+    """Lấy title từ dòng heading đầu tiên."""
+    for line in markdown_text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            return stripped[2:].strip()
+    return "Unknown"
+
+def parse_article_markdown(
+    markdown_text: str,
+    *,
+    url: str,
+    crawled_at: str | None = None,
+) -> dict:
+    """
+    Parse markdown đã crawl sẵn thành metadata chuẩn.
+    """
+    return {
+        "url": url,
+        "title": extract_title(markdown_text),
+        "date_crawled": crawled_at or datetime.now().astimezone().isoformat(),
+        "content": markdown_text.strip(),
+    }
 
 
 async def crawl_article(url: str) -> dict:
@@ -47,16 +71,17 @@ async def crawl_article(url: str) -> dict:
     """
     from crawl4ai import AsyncWebCrawler
 
-    # TODO: Implement crawling logic
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
-    raise NotImplementedError("Implement crawl_article")
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+
+    markdown_text = getattr(result, "markdown", "") or ""
+    metadata = getattr(result, "metadata", {}) or {}
+    article = parse_article_markdown(
+        markdown_text,
+        url=url,
+    )
+    article["title"] = metadata.get("title", article["title"])
+    return article
 
 
 async def crawl_all():
@@ -70,7 +95,7 @@ async def crawl_all():
         # Lưu file JSON
         filename = f"article_{i:02d}.json"
         filepath = DATA_DIR / filename
-        filepath.write_text(json.dumps(article, ensure_ascii=False, indent=2))
+        filepath.write_text(json.dumps(article, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"  ✓ Saved: {filepath}")
 
 
